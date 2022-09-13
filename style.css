@@ -68,12 +68,15 @@ ul {
   color: hsl(25, 97%, 53%);
   cursor: pointer;
 }
-.common:hover {
+.number:hover {
   background-color: hsl(25, 97%, 53%);
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+.number.active{
+  background-color: hsl(25, 97%, 53%);
+}
 .thankyou-card {
   position: absolute;
   inset: 0;
@@ -98,7 +101,7 @@ ul {
   perspective: 1000px;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card.active .flip-card-inner {
   transform: rotateY(180deg);
 }
 .flip-card-inner {
